@@ -23,13 +23,15 @@
   .header-cont {
     position: fixed;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     width: 100%;
     top: 0;
     padding: 2em;
     color: #fff;
     z-index: 2;
-    height: 90%;
+    height: 100vh;
+    align-items: center;
   }
   
   .header-cont:after {
@@ -53,7 +55,7 @@
   }
   
   h1 {
-    font-size: 90px;
+    font-size: 65px;
     text-transform: uppercase;
     font-family: 'Gambetta', serif;
     letter-spacing: -3px;
@@ -72,17 +74,19 @@
   
   .letter-ttl {
     font-family: 'Gambetta', serif;
-    font-size: 90px;
+    font-size: 80px;
     color:#FAFAFA;
   }
-  
+
   .matcha-art {
+    display: none;
+  }
+  
+  .matcha-art-mob {
     position: relative;
-    top: 200px;
-    left: -14%;
+    top: 100px;
     height: auto;
     width: 100%;
-    transform: scaleX(-1) scale(1.8);
   }
   
   .website-content {
@@ -232,12 +236,15 @@
     text-decoration: none !important;
   }
 
+
   @media screen and (min-width: 762px) {
-    .matcha-art {
-      top: 100px;
-      left: -9%;
-      width: 100%;
-      transform: scaleX(-1);
+
+    h1 {
+      font-size: 90px;
+    }
+
+    .letter-ttl {
+      font-size: 90px;
     }
 
     .header-cont {
@@ -300,8 +307,19 @@
   }
 
   @media screen and (min-width: 1232px) {
+
+    .matcha-art-mob {
+      display: none;
+    }
+
     .matcha-art {
+      display: block;
       top: -69px;
+      position: relative;
+      left: -9%;
+      height: auto;
+      width: 100%;
+      transform: scaleX(-1);
     }
 
     .website-wrapper {
@@ -326,7 +344,9 @@
       font-size: 26px;
       margin: 40px 80px 80px 0px;
     }
+
   }
+  
 
 
 
